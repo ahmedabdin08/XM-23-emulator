@@ -62,6 +62,7 @@ void return_from_exception() {
 		for (int i = PRIORITYLEVELS - 1; i >= 0; i--) { // Check from highest to lowest priority
 			if (!is_empty(MLQ[i])) {
 				dequeue(MLQ[i]);
+				break;
 			}
 		}
 

@@ -17,7 +17,7 @@ The XM-23 supports 41 fixed-length instructions and an additional 26 instruction
 The PSW holds information regarding the state of the machine such as the carry bit if the last instruction resulted in a carry, a fault bit if the CPU is executing a fault handler, its current priority, etc. The PSW's bits can be seen below
 ![23 05 09-10 - XM3 ISA_Page_22](https://github.com/ahmedabdin08/XM-23-emulator/assets/97932039/5b2833a7-c41a-4863-97f3-9f39f8bc9af7)
 
-##Memory
+## Memory
 The XM23 has 64 kibs of primary memory and 32 bytes of cache memory. Memory is organized in a little-endian format where the least significant byte comes first and the most significant byte comes last in 16-bit word pairs. Primary memory is accessed through the bus. Memory address 0x0000 to 0x000F contain the data, control, and status of the devices; while memory addresses 0xFFC0 to 0xFFFF contain the interrupt vector table for handling interrupts, faults, and traps. There is also the cache used to speed up access to instructions and data. There are two cache policies implemented for writes: write back and write through. Finally, there are three cache organiztion methods implemented: fully associative, direct mapping, and N-way associative.
 
 ## Devices
